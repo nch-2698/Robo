@@ -10,7 +10,8 @@ import {searchRobots} from "./reducers";
 
 const store = createStore(searchRobots);
 
-ReactDOM.render(<Provider>
-                    <App store={store}/>
-                </Provider>, document.getElementById('root'));
+ReactDOM.render(
+                <Provider store={store}>
+                    <App />
+                </Provider> , document.getElementById('root'));
 registerServiceWorker();
